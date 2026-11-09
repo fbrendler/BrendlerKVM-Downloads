@@ -17,7 +17,6 @@ Na página da versão, em **Assets**:
 | `BRENDLERServer-<versão>.exe` | PC principal (o que tem o mouse e o teclado) |
 | `BrendlerClient-<versão>.exe` | Cada PC Windows extra |
 | `BrendlerClient-Android-<versão>.apk` | Celulares e tablets Android |
-| `SHA256SUMS.txt` | Código de verificação dos arquivos |
 
 Use a **mesma versão** em todos os aparelhos.
 
@@ -36,7 +35,7 @@ Use a **mesma versão** em todos os aparelhos.
 
 - A comunicação usa **TLS**, com pareamento por código de 6 dígitos. Depois de parear, confira a **identidade do servidor** mostrada no cliente e no servidor.
 - Os programas **ainda não são assinados digitalmente**, então o Windows pode mostrar "O Windows protegeu o computador". Clique em **Mais informações → Executar assim mesmo**.
-- Para conferir se o download está íntegro, compare o SHA-256 do arquivo com o do `SHA256SUMS.txt`. No PowerShell: `Get-FileHash .\BRENDLERServer-<versão>.exe -Algorithm SHA256`.
+- Para conferir se o download está íntegro, compare o SHA-256 do arquivo com o que aparece nas notas da versão. No PowerShell: `Get-FileHash .\BRENDLERServer-<versão>.exe -Algorithm SHA256`.
 
 ## Limitações
 
