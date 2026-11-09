@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Brendler™ KVM: um mouse e um teclado para todos os seus aparelhos</title>
+<meta name="description" content="KVM por software para Windows e Android: leve o cursor até a borda da tela e controle outro PC, celular ou tablet com o mesmo mouse e teclado.">
+<link rel="icon" href="img/logo.png">
+<style>
+  :root {
+    --bg: #f3f3f3; --card: #ffffff; --border: #e5e5e5; --text: #1b1b1b; --sub: #5f5f5f;
+    --accent: #0067c0; --on-accent: #ffffff; --soft: #e8edf3;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #202020; --card: #2b2b2b; --border: #3a3a3a; --text: #ffffff; --sub: #ababab;
+      --accent: #60cdff; --on-accent: #000000; --soft: #15181d;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+         font-family: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, Roboto, sans-serif; line-height: 1.55; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  header { padding: 16px 0; border-bottom: 1px solid var(--border); background: var(--card); }
+  header .wrap { display: flex; align-items: center; gap: 12px; }
+  header img { width: 36px; height: 36px; border-radius: 8px; }
+  header strong { font-size: 18px; }
+  .hero { padding: 56px 0 40px; text-align: center; }
+  .hero img.logo { width: 112px; height: 112px; border-radius: 22px; }
+  h1 { font-size: clamp(28px, 5vw, 44px); line-height: 1.15; margin: 20px 0 12px; }
+  .lead { font-size: 18px; color: var(--sub); max-width: 680px; margin: 0 auto 28px; }
+  .botoes { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+  a.btn { display: inline-block; padding: 12px 22px; border-radius: 8px; text-decoration: none; font-weight: 600;
+          border: 1px solid var(--border); background: var(--card); color: var(--text); }
+  a.btn.principal { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+  a.btn:hover { filter: brightness(0.95); }
+  .aviso { margin-top: 16px; font-size: 14px; color: var(--sub); }
+  section { padding: 36px 0; }
+  h2 { font-size: 26px; margin: 0 0 20px; }
+  .grade { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 18px; }
+  .card h3 { margin: 0 0 6px; font-size: 17px; }
+  .card p { margin: 0; color: var(--sub); }
+  ol.passos { counter-reset: p; list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+  ol.passos li { counter-increment: p; background: var(--card); border: 1px solid var(--border); border-radius: 8px;
+                 padding: 14px 16px 14px 56px; position: relative; }
+  ol.passos li::before { content: counter(p); position: absolute; left: 16px; top: 12px; width: 28px; height: 28px;
+                         border-radius: 50%; background: var(--accent); color: var(--on-accent); font-weight: 700;
+                         display: grid; place-items: center; }
+  .telas { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+  .telas figure { margin: 0; background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 10px; }
+  .telas img { width: 100%; height: auto; border-radius: 6px; display: block; }
+  .telas figcaption { color: var(--sub); font-size: 14px; padding: 8px 4px 2px; }
+  details { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; margin-bottom: 10px; }
+  summary { cursor: pointer; font-weight: 600; }
+  details p { color: var(--sub); margin: 10px 0 0; }
+  .chamada { background: var(--soft); border: 1px solid var(--border); border-radius: 12px; padding: 28px; text-align: center; }
+  footer { padding: 28px 0 40px; color: var(--sub); font-size: 14px; text-align: center; border-top: 1px solid var(--border); }
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <img src="img/logo.png" alt="Logo Brendler">
+    <strong>Brendler™ KVM</strong>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <img class="logo" src="img/logo.png" alt="Logo Brendler">
+    <h1>Um mouse e um teclado para todos os seus aparelhos</h1>
+    <p class="lead">KVM por software para Windows e Android. Leve o cursor até a borda da tela e passe a controlar outro PC, celular ou tablet, sem trocar de mouse nem de teclado.</p>
+    <div class="botoes">
+      <a class="btn principal" href="https://github.com/fbrendler/BrendlerKVM-Downloads/releases/latest">Baixar para Windows</a>
+      <a class="btn" href="https://github.com/fbrendler/BrendlerKVM-Downloads/releases/latest">Baixar APK para Android</a>
+      <a class="btn" href="https://forms.gle/COLE-AQUI-O-LINK-DO-SEU-FORMULARIO">Dar minha opinião / avisar da versão Pro</a>
+    </div>
+    <p class="aviso">Versão de testes gratuita. Os programas ainda não são assinados digitalmente: o Windows pode mostrar um aviso na primeira vez (veja as perguntas frequentes).</p>
+  </div>
+
+  <section class="wrap">
+    <h2>O que ele faz</h2>
+    <div class="grade">
+      <div class="card"><h3>Mouse entre aparelhos</h3><p>Cursor, cliques e rolagem passam pelas bordas das telas, como se tudo fosse uma mesa só.</p></div>
+      <div class="card"><h3>Teclado junto</h3><p>O que você digita vai para o aparelho onde o mouse está, com atalhos como Ctrl+C e Ctrl+V.</p></div>
+      <div class="card"><h3>Copiar e colar entre as telas</h3><p>Copie texto num aparelho e cole em outro.</p></div>
+      <div class="card"><h3>Arranjo visual das telas</h3><p>Arraste e redimensione os monitores com o mouse para combinar com a sua mesa. Monitores e resolução são detectados sozinhos.</p></div>
+      <div class="card"><h3>Conexão automática</h3><p>Os aparelhos encontram o servidor na rede local, sem digitar IP.</p></div>
+      <div class="card"><h3>Conexão protegida</h3><p>Tudo trafega com TLS e cada aparelho é pareado uma vez com um código de 6 dígitos.</p></div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <h2>Como começar</h2>
+    <ol class="passos">
+      <li><strong>No PC principal</strong>, abra o BRENDLERServer e clique em <em>Iniciar servidor</em>.</li>
+      <li><strong>Pareie cada aparelho</strong> uma única vez com o código de 6 dígitos que o servidor mostra.</li>
+      <li><strong>Nos outros PCs</strong>, abra o BrendlerClient. <strong>No Android</strong>, instale o APK, ative o serviço de acessibilidade e toque em <em>Conectar</em>.</li>
+      <li><strong>Arraste as telas</strong> para a posição certa no servidor e leve o mouse até a borda.</li>
+    </ol>
+  </section>
+
+  <section class="wrap">
+    <h2>Telas do programa</h2>
+    <div class="telas">
+      <figure><img src="img/servidor.png" alt="Servidor: arranjo das telas com os monitores do PC principal e outros aparelhos conectados"><figcaption>Servidor (PC principal): arranjo das telas</figcaption></figure>
+      <figure><img src="img/cliente-windows.png" alt="Cliente Windows conectado ao servidor"><figcaption>Cliente Windows</figcaption></figure>
+      <figure><img src="img/android-celular.jpg" alt="Cliente Android no celular, conectado"><figcaption>Cliente Android (celular)</figcaption></figure>
+      <figure><img src="img/android-tablet.jpg" alt="Cliente Android no tablet, conectado"><figcaption>Cliente Android (tablet)</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <h2>Perguntas frequentes</h2>
+    <details><summary>É gratuito?</summary><p>Por enquanto, sim: esta é uma versão de testes. Estamos avaliando um modelo com versão gratuita e versão Pro. Conte no formulário o que você acharia justo.</p></details>
+    <details><summary>É seguro?</summary><p>A comunicação usa TLS e o pareamento por código impede que um servidor falso na rede seja aceito. Ainda não assinamos os programas digitalmente, então o Windows pode mostrar o aviso &ldquo;O Windows protegeu o computador&rdquo;: clique em Mais informações e depois em Executar assim mesmo. Cada versão publica o código de verificação (SHA-256) dos arquivos, para você conferir se o download está íntegro.</p></details>
+    <details><summary>Que dados vocês coletam?</summary><p>Os programas não enviam dados para os desenvolvedores. O texto copiado, as teclas e os movimentos do mouse trafegam só pela sua rede local, criptografados.</p></details>
+    <details><summary>Funciona pela internet?</summary><p>Não. Todos os aparelhos precisam estar na mesma rede local.</p></details>
+    <details><summary>Quais são os requisitos?</summary><p>Windows 10 ou 11 (64 bits) e Android 7.0 ou mais novo.</p></details>
+    <details><summary>O que ele não faz?</summary><p>Copiar e colar funciona só com texto. Ctrl+Alt+Del sempre age no PC principal. No Android, alguns apps (jogos, campos de senha, apps protegidos) podem ignorar os toques e o texto, porque o controle usa o serviço de acessibilidade do sistema.</p></details>
+  </section>
+
+  <section class="wrap">
+    <div class="chamada">
+      <h2>Ajude a decidir o futuro do programa</h2>
+      <p class="lead">Responda um formulário rápido: o que funcionou, o que faltou e quanto você pagaria por uma versão Pro.</p>
+      <a class="btn principal" href="https://forms.gle/COLE-AQUI-O-LINK-DO-SEU-FORMULARIO">Responder o formulário</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    © 2026 Brendler. Todos os direitos reservados.<br>
+    Contato: <a href="mailto:seu-email@exemplo.com">seu-email@exemplo.com</a> ·
+    <a href="https://github.com/fbrendler/BrendlerKVM-Downloads/issues">Relatar um problema</a>
+  </div>
+</footer>
+
+</body>
+</html>
