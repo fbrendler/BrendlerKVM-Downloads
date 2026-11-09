@@ -51,7 +51,7 @@ Os programas não enviam dados para os desenvolvedores. O texto copiado, as tecl
 
 ## Dê sua opinião
 
-- Respondeu o formulário? Obrigado! Se ainda não: https://forms.gle/COLE-AQUI-O-LINK-DO-SEU-FORMULARIO
+- Respondeu o formulário? Obrigado! Se ainda não: https://docs.google.com/forms/d/e/1FAIpQLSddDwyJyYAHb9AUyOxCz4mrtE7LsTi0Xcry_dMa1NjzJBXQag/viewform
 - Encontrou um erro? [Abra uma issue](https://github.com/fbrendler/BrendlerKVM-Downloads/issues/new). O botão **Relatar problema**, em **Sobre** nos programas, copia o registro para você colar.
 
 © 2026 Brendler. Todos os direitos reservados.
