@@ -18,4 +18,4 @@
 - O botão **Relatar problema** copia um registro técnico para a sua área de transferência; ele só vai ao desenvolvedor se **você** o colar numa issue ou e-mail.
 - Ao responder o formulário de opinião, você fornece os dados que escolher informar, que serão usados apenas para decidir o futuro do programa.
 
-Contato: seu-email@exemplo.com
+Contato: fabiobrendler@outlook.com
