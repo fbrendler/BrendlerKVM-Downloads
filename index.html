@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light dark">
 <title>Brendler™ KVM: um mouse e um teclado para todos os seus aparelhos</title>
-<meta name="description" content="KVM por software para Windows e Android: leve o cursor até a borda da tela e controle outro PC, celular ou tablet com o mesmo mouse e teclado.">
+<meta name="description" content="KVM por software para Windows e Android (e, de forma parcial, Fire TV Stick): leve o cursor até a borda da tela e controle outro PC, celular, tablet ou TV com o mesmo mouse e teclado.">
 <link rel="icon" href="img/logo.png">
 <style>
   :root {
@@ -42,6 +42,7 @@
   .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 18px; }
   .card h3 { margin: 0 0 6px; font-size: 17px; }
   .card p { margin: 0; color: var(--sub); }
+  .card.larga { grid-column: 1 / -1; }
   ol.passos { counter-reset: p; list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
   ol.passos li { counter-increment: p; background: var(--card); border: 1px solid var(--border); border-radius: 8px;
                  padding: 14px 16px 14px 56px; position: relative; }
@@ -73,7 +74,7 @@
   <div class="wrap hero">
     <img class="logo" src="img/logo.png" alt="Logo Brendler">
     <h1>Um mouse e um teclado para todos os seus aparelhos</h1>
-    <p class="lead">KVM por software para Windows e Android. Leve o cursor até a borda da tela e passe a controlar outro PC, celular ou tablet, sem trocar de mouse nem de teclado.</p>
+    <p class="lead">KVM por software para Windows e Android, com suporte parcial ao Fire TV Stick. Leve o cursor até a borda da tela e passe a controlar outro PC, celular, tablet ou TV, sem trocar de mouse nem de teclado.</p>
     <div class="botoes">
       <a class="btn principal" href="https://github.com/fbrendler/BrendlerKVM-Downloads/releases/latest">Baixar para Windows</a>
       <a class="btn" href="https://github.com/fbrendler/BrendlerKVM-Downloads/releases/latest">Baixar APK para Android</a>
@@ -91,6 +92,7 @@
       <div class="card"><h3>Arranjo visual das telas</h3><p>Arraste e redimensione os monitores com o mouse para combinar com a sua mesa. Monitores e resolução são detectados sozinhos.</p></div>
       <div class="card"><h3>Conexão automática</h3><p>Os aparelhos encontram o servidor na rede local, sem digitar IP.</p></div>
       <div class="card"><h3>Conexão protegida</h3><p>Tudo trafega com TLS e cada aparelho é pareado uma vez com um código de 6 dígitos.</p></div>
+      <div class="card larga"><h3>Fire TV Stick (parcial)</h3><p>Controle a TV com o mouse e o teclado do PC: menus, busca e Voltar. Em apps como a Netflix, a roda e as setas movem o destaque e o clique abre o item.</p></div>
     </div>
   </section>
 
@@ -99,7 +101,7 @@
     <ol class="passos">
       <li><strong>No PC principal</strong>, abra o BRENDLERServer e clique em <em>Iniciar servidor</em>.</li>
       <li><strong>Pareie cada aparelho</strong> uma única vez com o código de 6 dígitos que o servidor mostra.</li>
-      <li><strong>Nos outros PCs</strong>, abra o BrendlerClient. <strong>No Android</strong>, instale o APK, ative o serviço de acessibilidade e toque em <em>Conectar</em>.</li>
+      <li><strong>Nos outros PCs</strong>, abra o BrendlerClient. <strong>No Android</strong>, instale o APK, ative o serviço de acessibilidade e toque em <em>Conectar</em>. <strong>No Fire TV Stick</strong>, a instalação é feita uma vez pelo ADB do PC (passo a passo no <a href="https://github.com/fbrendler/BrendlerKVM-Downloads#fire-tv-stick">README</a>).</li>
       <li><strong>Arraste as telas</strong> para a posição certa no servidor e leve o mouse até a borda.</li>
     </ol>
   </section>
@@ -120,8 +122,9 @@
     <details><summary>É seguro?</summary><p>A comunicação usa TLS e o pareamento por código impede que um servidor falso na rede seja aceito. Ainda não assinamos os programas digitalmente, então o Windows pode mostrar o aviso &ldquo;O Windows protegeu o computador&rdquo;: clique em Mais informações e depois em Executar assim mesmo. Cada versão publica o código de verificação (SHA-256) dos arquivos, para você conferir se o download está íntegro.</p></details>
     <details><summary>Que dados vocês coletam?</summary><p>Os programas não enviam dados para os desenvolvedores. O texto copiado, as teclas e os movimentos do mouse trafegam só pela sua rede local, criptografados.</p></details>
     <details><summary>Funciona pela internet?</summary><p>Não. Todos os aparelhos precisam estar na mesma rede local.</p></details>
-    <details><summary>Quais são os requisitos?</summary><p>Windows 10 ou 11 (64 bits) e Android 7.0 ou mais novo.</p></details>
+    <details><summary>Quais são os requisitos?</summary><p>Windows 10 ou 11 (64 bits), Android 7.0 ou mais novo e, para a TV, Fire TV Stick com Fire OS 7 ou mais novo.</p></details>
     <details><summary>O que ele não faz?</summary><p>Copiar e colar funciona só com texto. Ctrl+Alt+Del sempre age no PC principal. No Android, alguns apps (jogos, campos de senha, apps protegidos) podem ignorar os toques e o texto, porque o controle usa o serviço de acessibilidade do sistema.</p></details>
+    <details><summary>Funciona no Fire TV Stick?</summary><p>Sim, de forma parcial. Funcionam: o ponteiro do mouse, o clique nos menus da TV, a digitação (inclusive na busca da Netflix), o botão direito como Voltar e as setas e o Enter do teclado como o controle remoto. Em apps feitos só para o controle remoto, como a Netflix, não dá para escolher um item apontando com o mouse: a roda ou as setas movem o destaque e o clique abre o item em destaque. Nesses apps, o ç e as letras acentuadas saem como a letra simples, e arrastar não funciona. A instalação precisa do ADB no PC do servidor e da Depuração ADB ligada na TV.</p></details>
   </section>
 
   <section class="wrap">
