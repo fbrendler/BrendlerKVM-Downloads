@@ -51,7 +51,7 @@ A instalação na TV é feita uma vez, pelo PC do servidor:
 
 Deixe a **Depuração ADB** ligada: quando a TV conecta, o servidor usa o ADB do PC para iniciar nela um ajudante que faz as teclas do controle remoto e o clique de mouse. Depois de atualizar o app na TV, abra-o uma vez para ele reconectar.
 
-Na TV, o botão direito e o do meio são **Voltar**, e as setas e o Enter do teclado funcionam como o controle remoto. Em apps feitos só para o controle remoto, como a **Netflix**, a roda do mouse move o destaque e o clique funciona como o **OK** (abre o item em destaque, não o que está embaixo do ponteiro).
+Na TV, o botão direito e o do meio são **Voltar**, a roda do mouse e as setas do teclado percorrem as listas (como as setas do controle), e o Enter funciona como o **OK**. O clique abre o item embaixo do ponteiro na tela inicial do Fire TV e em apps como o YouTube. Em alguns menus (como o lateral do Claro tv+), o 1º clique leva o destaque até o item e o 2º abre. Em apps feitos só para o controle remoto, como a **Netflix** e o **Prime Video**, o clique funciona como o **OK** (abre o item em destaque, não o que está embaixo do ponteiro). O teclado do PC digita nas buscas, inclusive nas que têm teclado próprio na tela (como a do Claro tv+).
 
 ## Segurança
 
@@ -65,7 +65,7 @@ Na TV, o botão direito e o do meio são **Voltar**, e as setas e o Enter do tec
 - `Ctrl+Alt+Del` sempre age no PC principal.
 - Programas abertos como administrador no PC extra podem ignorar o cliente; nesse caso, rode o `BrendlerClient.exe` como administrador também.
 - No Android, alguns apps (jogos, campos de senha, apps protegidos) podem ignorar os toques e o texto, porque o controle usa o serviço de acessibilidade do sistema.
-- Na Fire TV, em apps como a Netflix não dá para escolher um item apontando com o mouse (use a roda ou as setas), e o ç e as letras acentuadas saem como a letra simples.
+- Na Fire TV, em apps como a Netflix e o Prime Video não dá para escolher um item apontando com o mouse (use a roda ou as setas), e o ç e as letras acentuadas saem como a letra simples.
 
 ## Privacidade
 
